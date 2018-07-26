@@ -5,6 +5,7 @@
 ```
 wget https://raw.githubusercontent.com/SE7ENSKY/do-dokku-template/master/install-env.sh; bash install-env.sh
 ```
+<sup>In progress you need to press: Enter, Enter, Enter, Y</sup>
 
 **Step 2.** Add your ssh-key to dokku
 ```
