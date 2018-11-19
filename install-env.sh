@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOKKU_VERSION=v0.12.12
+DOKKU_VERSION=v0.12.13
 
 # SWAP
 fallocate -l 1G /swapfile
