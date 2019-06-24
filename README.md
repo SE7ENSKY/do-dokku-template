@@ -17,7 +17,7 @@ echo 'YOUR_SSH_KEY' | sshcommand acl-add dokku YOUR_NAME
 
 ___
 
-## If your need DB:
+## If your need SQL DB:
 
 **Step 4.** Install mariadb
 ```
@@ -32,4 +32,18 @@ docker run -d --name mariadb -v /srv/mariadb:/data -p 3306:3306 paintedfox/maria
 **Step 6.** View mariadb credentials
 ```
 docker logs mariadb
+```
+
+___
+
+## If your need Mongo DB:
+
+**Step 4.** Install mongo
+```
+docker pull mongo
+```
+
+**Step 5.** First start mongodb in docker container
+```
+docker run --name mongodb -e MONGO_INITDB_ROOT_USERNAME=your_user -e MONGO_INITDB_ROOT_PASSWORD=your_parrword -v /srv/mongodb:/data/db -d -p 27017:27017 mongo
 ```
