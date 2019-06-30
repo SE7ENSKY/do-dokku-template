@@ -16,6 +16,8 @@ echo 'YOUR_SSH_KEY' | sshcommand acl-add dokku YOUR_NAME
 
 
 ___
+___
+___
 
 ## If your need SQL DB:
 
@@ -57,7 +59,7 @@ ___
 docker pull postgres
 ```
 
-**Step 5.** First start mongodb in docker container
+**Step 5.** First start postgres in docker container
 ```
 docker run -d --name postgresdb -e POSTGRES_USER=your_user -e POSTGRES_PASSWORD=your_password -v /srv/postgresdb:/var/lib/postgresql/data -p 5432:5432 postgres
 ```
