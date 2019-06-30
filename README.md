@@ -45,5 +45,19 @@ docker pull mongo
 
 **Step 5.** First start mongodb in docker container
 ```
-docker run --name mongodb -e MONGO_INITDB_ROOT_USERNAME=your_user -e MONGO_INITDB_ROOT_PASSWORD=your_parrword -v /srv/mongodb:/data/db -d -p 27017:27017 mongo
+docker run -d --name mongodb -e MONGO_INITDB_ROOT_USERNAME=your_user -e MONGO_INITDB_ROOT_PASSWORD=your_password -v /srv/mongodb:/data/db -p 27017:27017 mongo
+```
+
+___
+
+## If your need Postgres DB:
+
+**Step 4.** Install postgres
+```
+docker pull postgres
+```
+
+**Step 5.** First start mongodb in docker container
+```
+docker run -d --name postgresdb -e POSTGRES_USER=your_user -e POSTGRES_PASSWORD=your_password -v /srv/postgresdb:/var/lib/postgresql/data -p 5432:5432 postgres
 ```
