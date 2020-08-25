@@ -1,9 +1,9 @@
 #!/bin/bash
 
-DOKKU_VERSION=v0.17.9
+DOKKU_VERSION=v0.21.4
 
 # SWAP
-fallocate -l 2G /swapfile
+fallocate -l 4G /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile
 mkswap /swapfile
